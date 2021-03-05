@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,6 +19,7 @@ public class TestBase {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream inputStream;
+	public static Logger log = Logger.getLogger("devpinoyLogger");
 
 	@BeforeSuite
 	public void setUp() {
@@ -61,7 +63,7 @@ public class TestBase {
 			}
 
 			driver.get(config.getProperty("testsiteurl"));
-			driver.manage().window().maximize();
+//			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicit.Wait")),
 					TimeUnit.SECONDS);
 		}

@@ -3,7 +3,7 @@
 <suite name="Automation Boilerplate">
 	<test thread-count="5" name="LoginTest">
 		<classes>
-			<class name="io.lostdev.testcases.LoginTest" />
+			<class name="io.lostdev.testcases.Interview" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
